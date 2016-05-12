@@ -11,11 +11,12 @@ BenchStore.all = function () {
 BenchStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case BenchConstants.BENCHES_RECEIVED:
-      _benches = payload.benches;
-      break;
+      var result = resetBenches(payload.benches);
+        BenchStore.__emitChange();
+        break;
   }
 };
 
 window.BenchStore = BenchStore;
 
-module.exports = BenchStore
+module.exports = BenchStore;

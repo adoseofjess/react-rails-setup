@@ -1,6 +1,6 @@
 ApiUtil = {
   fetchBenches: function () {
-
+    console.log("FETCH");
   }
 }
 
